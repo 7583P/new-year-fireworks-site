@@ -1,127 +1,902 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy Policy for New Year Fireworks Playground.">
+
+  <meta name="description"
+        content="Privacy Policy for New Year Fireworks Playground, including Google Play Games Services, Google AdMob, data protection and user rights.">
+
   <title>Privacy Policy | New Year Fireworks Playground</title>
+
   <style>
-    :root{
-      --bg:#0a1026;
-      --bg2:#14183a;
-      --card:#ffffff0f;
-      --line:#ffffff18;
-      --text:#f4f7ff;
-      --muted:#cad1e8;
-      --gold:#ffd56a;
-      --cyan:#7be9ff;
+    :root {
+      --bg: #0a1026;
+      --bg2: #14183a;
+      --card: #ffffff0f;
+      --line: #ffffff18;
+      --text: #f4f7ff;
+      --muted: #cad1e8;
+      --gold: #ffd56a;
+      --cyan: #7be9ff;
+      --green: #8cffc7;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system,
+                   Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
       background:
-        radial-gradient(circle at 12% 10%, rgba(123,233,255,.13), transparent 24%),
-        radial-gradient(circle at 86% 12%, rgba(255,213,106,.12), transparent 22%),
-        linear-gradient(180deg,var(--bg2),var(--bg));
+        radial-gradient(
+          circle at 12% 10%,
+          rgba(123,233,255,.13),
+          transparent 24%
+        ),
+        radial-gradient(
+          circle at 86% 12%,
+          rgba(255,213,106,.12),
+          transparent 22%
+        ),
+        linear-gradient(
+          180deg,
+          var(--bg2),
+          var(--bg)
+        );
     }
-    .wrap{max-width:920px;margin:0 auto;padding:0 24px}
-    .top{padding:28px 0 12px}
-    .back{
-      display:inline-flex;align-items:center;gap:10px;padding:11px 14px;border-radius:12px;
-      text-decoration:none;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09)
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
-    .panel{
-      margin:18px 0 50px;background:var(--card);border:1px solid var(--line);
-      border-radius:28px;padding:34px;box-shadow:0 18px 50px rgba(0,0,0,.32)
+
+    .top {
+      padding: 28px 0 12px;
     }
-    h1{margin:0 0 12px;font-size:clamp(2.3rem,5vw,3.6rem);letter-spacing:-.03em}
-    h2{margin:28px 0 10px;font-size:1.3rem;color:var(--gold)}
-    p,li{color:var(--muted);line-height:1.85}
-    .meta{color:#fff;font-weight:700}
-    .notice{
-      margin:20px 0;padding:18px 20px;border-radius:18px;
-      background:rgba(123,233,255,.08);border:1px solid rgba(123,233,255,.15)
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.09);
+      transition: background .2s ease;
     }
-    a{color:var(--cyan)}
-    ul{padding-left:22px}
-    code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px}
-    footer{padding:0 0 38px;color:var(--muted)}
+
+    .back:hover {
+      background: rgba(123,233,255,.13);
+    }
+
+    .panel {
+      margin: 18px 0 50px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.32);
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.3rem,5vw,3.6rem);
+      letter-spacing: -.03em;
+    }
+
+    h2 {
+      margin: 32px 0 12px;
+      font-size: 1.3rem;
+      color: var(--gold);
+    }
+
+    h3 {
+      margin: 20px 0 10px;
+      font-size: 1.05rem;
+      color: var(--cyan);
+    }
+
+    p, li {
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .meta {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .notice {
+      margin: 20px 0;
+      padding: 18px 20px;
+      border-radius: 18px;
+      background: rgba(123,233,255,.08);
+      border: 1px solid rgba(123,233,255,.15);
+    }
+
+    .notice p {
+      margin: 0;
+    }
+
+    .notice strong {
+      color: var(--text);
+    }
+
+    .highlight {
+      margin: 22px 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--gold);
+      background: rgba(255,213,106,.05);
+      border-radius: 8px;
+    }
+
+    a {
+      color: var(--cyan);
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    code {
+      background: rgba(255,255,255,.08);
+      padding: 2px 6px;
+      border-radius: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact {
+      padding: 20px;
+      margin-top: 16px;
+      background: rgba(123,233,255,.06);
+      border: 1px solid rgba(123,233,255,.15);
+      border-radius: 16px;
+    }
+
+    .contact p {
+      margin: 6px 0;
+    }
+
+    footer {
+      padding: 0 0 38px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .wrap {
+        padding: 0 16px;
+      }
+
+      .panel {
+        padding: 22px;
+        border-radius: 20px;
+      }
+
+      h2 {
+        font-size: 1.18rem;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <div class="wrap top">
-    <a class="back" href="index.html">← Back to official site</a>
+    <a class="back" href="index.html">
+      &larr; Back to official site
+    </a>
   </div>
 
   <main class="wrap">
-    <section class="panel">
+
+    <article class="panel">
+
       <h1>Privacy Policy</h1>
-      <p class="meta">Last updated: July 28, 2026</p>
+
+      <p class="meta">
+        Last updated: October 11, 2026
+      </p>
 
       <div class="notice">
-        This privacy policy is for <strong>New Year Fireworks Playground</strong> and is based on the policy you provided for the game.
+        <p>
+          This Privacy Policy applies to
+          <strong>New Year Fireworks Playground</strong>,
+          an Android game published by Matias Games Dev.
+          It explains how information is processed through
+          the Game and its integrated services, including
+          Google Play Games Services and Google AdMob.
+        </p>
       </div>
 
       <p>
-        Thank you for using <strong>New Year Fireworks Playground</strong>. Your privacy is important to us.
-        This Privacy Policy explains how information is handled when you use our application.
+        We respect your privacy and are committed to
+        transparency about how information is accessed,
+        collected, used, stored and shared when you
+        interact with our Game.
       </p>
 
-      <h2>1. Information We Collect</h2>
       <p>
-        Our application does not collect personally identifiable information such as your name, email address,
-        phone number, or home address.
+        This policy also explains your privacy choices,
+        how to request assistance with your information,
+        and how third-party service providers may
+        process data.
       </p>
 
-      <h2>2. Advertising</h2>
+      <h2>1. Information We Collect and Process</h2>
+
       <p>
-        This app uses <strong>Google AdMob</strong> to display advertisements. AdMob may collect certain information,
-        including advertising identifiers, approximate IP address, device information, diagnostics, and app usage data
-        to provide and improve advertising services.
-      </p>
-      <p>
-        For more information, please refer to Google’s Privacy Policy:
-        <br>
-        <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+        The information processed depends on the
+        features you use and the services enabled
+        in the Game.
       </p>
 
-      <h2>3. In-App Purchases</h2>
+      <h3>1.1 Gameplay Information</h3>
+
       <p>
-        If the app offers in-app purchases, all transactions are securely processed through <strong>Google Play</strong>.
-        We do not collect or store your payment information.
+        The Game may process gameplay-related information,
+        including:
       </p>
 
-      <h2>4. Permissions</h2>
-      <p>
-        The app only requests permissions that are necessary for its intended functionality.
-      </p>
-
-      <h2>5. Children's Privacy</h2>
-      <p>
-        This app is intended for a general audience. If you believe that a child has provided personal information
-        through the app, please contact us so we can address the issue appropriately.
-      </p>
-
-      <h2>6. Changes to This Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.
-      </p>
-
-      <h2>7. Contact Us</h2>
-      <p>
-        If you have any questions about this Privacy Policy, you may contact us at:
-      </p>
       <ul>
-        <li>Email: <a href="mailto:matiasgamesdev.support@gmail.com">matiasgamesdev.support@gmail.com</a></li>
-        <li>App: <code>com.matias.newyearfireworkplayground</code></li>
+        <li>Game scores and achievements.</li>
+        <li>Gameplay progress and completed objectives.</li>
+        <li>Game preferences and settings.</li>
+        <li>Progress saved locally on the device.</li>
+        <li>
+          Leaderboard information where the corresponding
+          feature is enabled.
+        </li>
+        <li>
+          Saved game data where cloud saving is enabled.
+        </li>
       </ul>
-    </section>
+
+      <p>
+        This information is used to provide gameplay
+        features and maintain the player's experience.
+      </p>
+
+      <h3>1.2 Google Play Games Information</h3>
+
+      <p>
+        When Google Play Games Services is used,
+        Google may provide the Game with information
+        associated with the authenticated player.
+      </p>
+
+      <p>
+        Depending on the permissions and functionality
+        enabled, this may include:
+      </p>
+
+      <ul>
+        <li>Google Play Games player identifier.</li>
+        <li>Player display name and avatar.</li>
+        <li>Achievement information.</li>
+        <li>Scores and leaderboard rankings.</li>
+        <li>
+          Saved game information when the Saved Games
+          feature is enabled.
+        </li>
+      </ul>
+
+      <p>
+        This information is used only to provide
+        supported Google Play Games functionality.
+      </p>
+
+      <h3>1.3 Advertising and Technical Information</h3>
+
+      <p>
+        The Google Mobile Ads SDK used for AdMob
+        may automatically collect or process:
+      </p>
+
+      <ul>
+        <li>IP address.</li>
+        <li>
+          Approximate geographical location inferred
+          from the IP address.
+        </li>
+        <li>
+          Device and operating system information.
+        </li>
+        <li>
+          Advertising identifiers, where available
+          and permitted.
+        </li>
+        <li>App usage and interaction information.</li>
+        <li>Advertising impressions and interactions.</li>
+        <li>
+          Diagnostic information, including
+          performance and crash-related data.
+        </li>
+      </ul>
+
+      <p>
+        These data categories may vary according to
+        operating system settings, advertising
+        configuration, consent choices and applicable law.
+      </p>
+
+      <h2>2. Google Play Games Services</h2>
+
+      <p>
+        New Year Fireworks Playground integrates with
+        Google Play Games Services to support applicable
+        player and gameplay functionality.
+      </p>
+
+      <p>
+        Depending on the enabled features, Google Play
+        Games Services may be used for:
+      </p>
+
+      <ul>
+        <li>Player authentication.</li>
+        <li>Displaying the player's gaming profile.</li>
+        <li>Achievements.</li>
+        <li>Leaderboards and scores.</li>
+        <li>Saving or restoring game progress.</li>
+      </ul>
+
+      <p>
+        When authentication occurs, the Game may
+        receive a player identifier and profile
+        information necessary to provide the selected
+        Google Play Games features.
+      </p>
+
+      <p>
+        The Game uses information obtained through
+        Google Play Games APIs for player-facing
+        gameplay features and related functionality.
+      </p>
+
+      <p>
+        We do not use Google Play Games player data
+        to create advertising profiles, and we do not
+        sell Google Play Games player information.
+      </p>
+
+      <p>
+        We do not share Google Play Games player data
+        with advertising providers for personalized
+        advertising.
+      </p>
+
+      <p>
+        Google may process Google Play Games information
+        in accordance with its own privacy policies.
+      </p>
+
+      <p>
+        For additional details, please visit:
+        <a href="https://policies.google.com/privacy"
+           target="_blank"
+           rel="noopener noreferrer">
+          Google Privacy Policy
+        </a>.
+      </p>
+
+      <h2>3. Google AdMob and Advertising</h2>
+
+      <p>
+        The Game uses Google AdMob, a mobile advertising
+        service provided by Google, to display
+        advertisements.
+      </p>
+
+      <p>
+        Advertisements may include banner ads,
+        rewarded video ads, or other supported formats,
+        depending on the features available in the Game.
+      </p>
+
+      <h3>3.1 Advertising Data</h3>
+
+      <p>
+        Google AdMob and its advertising technology
+        partners may process device identifiers,
+        advertising identifiers, IP addresses,
+        usage information, advertising interactions
+        and diagnostic data.
+      </p>
+
+      <h3>3.2 Purposes of Advertising Data Processing</h3>
+
+      <ul>
+        <li>Delivering advertisements.</li>
+        <li>Measuring advertising performance.</li>
+        <li>Detecting advertising fraud and abuse.</li>
+        <li>Maintaining advertising service security.</li>
+        <li>Improving advertising services.</li>
+        <li>
+          Personalizing advertisements where permitted
+          and configured, subject to applicable
+          consent requirements.
+        </li>
+      </ul>
+
+      <h3>3.3 Personalized Advertising and Consent</h3>
+
+      <p>
+        Where required by applicable law, appropriate
+        consent must be obtained before the use of
+        personal information for personalized advertising.
+      </p>
+
+      <p>
+        Advertising choices may also be available
+        through Google Account settings, Android
+        privacy settings, and any consent controls
+        provided within the Game.
+      </p>
+
+      <p>
+        For more information, visit:
+        <a href="https://policies.google.com/technologies/ads"
+           target="_blank"
+           rel="noopener noreferrer">
+          Google's Advertising Privacy Information
+        </a>.
+      </p>
+
+      <h2>4. How We Use Information</h2>
+
+      <p>
+        Information processed in connection with
+        the Game is used for the following purposes,
+        where applicable:
+      </p>
+
+      <ul>
+        <li>Providing game functionality.</li>
+        <li>Maintaining gameplay progress.</li>
+        <li>
+          Authenticating players with Google
+          Play Games Services.
+        </li>
+        <li>
+          Providing achievements and leaderboards.
+        </li>
+        <li>
+          Supporting saved game functionality.
+        </li>
+        <li>Displaying advertisements.</li>
+        <li>
+          Detecting fraud and unauthorized activity.
+        </li>
+        <li>
+          Diagnosing errors and improving stability.
+        </li>
+        <li>
+          Complying with applicable legal obligations.
+        </li>
+      </ul>
+
+      <p>
+        Information obtained through Google APIs
+        is used for the purposes described in this
+        policy and applicable user-facing features.
+      </p>
+
+      <h2>5. Data Sharing and Third Parties</h2>
+
+      <p>
+        The Game integrates with third-party
+        technology providers.
+      </p>
+
+      <h3>5.1 Google Play Games Services</h3>
+
+      <p>
+        Google may process player identifiers,
+        profile information, gameplay achievements,
+        scores and saved game information when
+        the corresponding functionality is enabled.
+      </p>
+
+      <h3>5.2 Google AdMob</h3>
+
+      <p>
+        Google and its advertising technology
+        partners may process advertising-related
+        information to provide, measure, secure
+        and improve advertising services.
+      </p>
+
+      <h3>5.3 Google Play Billing</h3>
+
+      <p>
+        If in-app purchases are offered, payment
+        transactions are processed through
+        Google Play.
+      </p>
+
+      <p>
+        We do not directly collect or store
+        payment card numbers.
+      </p>
+
+      <p>
+        Purchase-related information necessary
+        for delivering purchased features may
+        be processed by the Game and Google Play.
+      </p>
+
+      <p>
+        We do not sell Google Play Games player
+        information to data brokers or advertisers.
+      </p>
+
+      <h2>6. Data Storage and Retention</h2>
+
+      <p>
+        Game preferences and gameplay progress
+        may be stored locally on the player's device.
+      </p>
+
+      <p>
+        Where Google Play Games cloud functionality
+        is enabled, relevant player information
+        and saved game data may be stored or
+        processed through Google's services.
+      </p>
+
+      <p>
+        Local information may remain on the device
+        until it is cleared, replaced or removed
+        through applicable device or application
+        controls.
+      </p>
+
+      <p>
+        Data stored or processed by Google is
+        subject to Google's applicable retention
+        policies and user controls.
+      </p>
+
+      <p>
+        We retain information under our direct
+        control only for as long as reasonably
+        necessary for its disclosed purpose,
+        subject to applicable legal obligations.
+      </p>
+
+      <h2>7. Data Security</h2>
+
+      <p>
+        We recognize the importance of protecting
+        player information.
+      </p>
+
+      <p>
+        Google Play Games Services and Google
+        advertising services provide security
+        measures for information processed
+        through their systems.
+      </p>
+
+      <p>
+        We seek to limit access to player information
+        to the functionality necessary to operate
+        the Game.
+      </p>
+
+      <p>
+        However, no method of electronic storage
+        or transmission can be guaranteed to
+        be completely secure.
+      </p>
+
+      <h2>8. Your Privacy Rights and Choices</h2>
+
+      <p>
+        Depending on your location and applicable
+        privacy laws, you may have rights to
+        request access to, correction of, or
+        deletion of certain information.
+      </p>
+
+      <p>
+        You may also have choices regarding
+        advertising personalization and
+        Google Play Games activity.
+      </p>
+
+      <h3>8.1 Google Account Controls</h3>
+
+      <p>
+        You can review available Google Account
+        privacy settings at:
+      </p>
+
+      <p>
+        <a href="https://myaccount.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          https://myaccount.google.com/
+        </a>
+      </p>
+
+      <h3>8.2 Google Play Games Data</h3>
+
+      <p>
+        Google provides controls for managing
+        Google Play Games profile information
+        and associated game data.
+      </p>
+
+      <p>
+        Depending on the service and available
+        controls, players may be able to delete
+        their Google Play Games data for an
+        individual game.
+      </p>
+
+      <h3>8.3 Advertising Choices</h3>
+
+      <p>
+        You can manage certain advertising
+        privacy preferences through your
+        Google Account and Android settings.
+      </p>
+
+      <p>
+        Visit:
+        <a href="https://myadcenter.google.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Google My Ad Center
+        </a>.
+      </p>
+
+      <h2>9. Data Deletion Requests</h2>
+
+      <p>
+        If you wish to request deletion of
+        information controlled by the Game's
+        developer, please contact:
+      </p>
+
+      <div class="contact">
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:matiasgamesdev.support@gmail.com">
+            matiasgamesdev.support@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>Subject:</strong>
+          New Year Fireworks Playground -
+          Data Deletion Request
+        </p>
+      </div>
+
+      <p>
+        Please describe the request and provide
+        only the information reasonably necessary
+        to identify the relevant game data.
+      </p>
+
+      <p>
+        Do not send your Google Account password
+        or other sensitive credentials.
+      </p>
+
+      <p>
+        We will review requests concerning data
+        under our control and respond in accordance
+        with applicable privacy laws.
+      </p>
+
+      <p>
+        Information managed directly by Google
+        may need to be deleted through the
+        relevant Google Account or
+        Google Play Games controls.
+      </p>
+
+      <p>
+        Uninstalling the Game may remove certain
+        locally stored information, but it does
+        not necessarily delete information
+        retained through Google services.
+      </p>
+
+      <h2>10. Children's Privacy</h2>
+
+      <p>
+        We recognize that children's privacy
+        requires special protection.
+      </p>
+
+      <p>
+        The Game's intended audience, advertising
+        configuration and available features
+        must comply with applicable child
+        privacy requirements and Google Play
+        policies.
+      </p>
+
+      <p>
+        Where applicable, the Game must apply
+        age-appropriate advertising restrictions,
+        consent mechanisms and data-processing
+        safeguards.
+      </p>
+
+      <p>
+        Parents or legal guardians may contact
+        us with questions or requests concerning
+        their children's information.
+      </p>
+
+      <h2>11. International Data Processing</h2>
+
+      <p>
+        Google and its service providers may
+        process information in countries
+        outside the country where you live.
+      </p>
+
+      <p>
+        Such processing is subject to applicable
+        legal requirements and the privacy
+        protections implemented by the
+        relevant service providers.
+      </p>
+
+      <h2>12. In-App Purchases</h2>
+
+      <p>
+        If the Game offers optional purchases,
+        transactions are handled through
+        Google Play Billing.
+      </p>
+
+      <p>
+        Google Play may process purchase
+        information according to its
+        applicable policies.
+      </p>
+
+      <p>
+        The developer does not directly
+        receive complete payment card details.
+      </p>
+
+      <h2>13. Permissions</h2>
+
+      <p>
+        The Game may request Android or Google
+        service permissions necessary for
+        enabled functionality.
+      </p>
+
+      <p>
+        Access to Google Play Games data is
+        limited to the permissions requested
+        and authorized for the supported
+        gameplay features.
+      </p>
+
+      <p>
+        The Game does not require users
+        to provide their home address or
+        telephone number to play.
+      </p>
+
+      <h2>14. Changes to This Privacy Policy</h2>
+
+      <p>
+        We may update this Privacy Policy
+        when the Game's functionality,
+        data-processing practices,
+        third-party integrations or
+        legal obligations change.
+      </p>
+
+      <p>
+        Updated versions will be published
+        on this page with a revised
+        "Last updated" date.
+      </p>
+
+      <p>
+        Where legally required, we will
+        provide additional notice or
+        obtain consent before introducing
+        materially different processing
+        of personal information.
+      </p>
+
+      <h2>15. Contact Us</h2>
+
+      <p>
+        For questions, concerns or requests
+        regarding this Privacy Policy,
+        please contact:
+      </p>
+
+      <div class="contact">
+
+        <p>
+          <strong>Application:</strong><br>
+          New Year Fireworks Playground
+        </p>
+
+        <p>
+          <strong>Developer:</strong><br>
+          Matias Games Dev
+        </p>
+
+        <p>
+          <strong>Contact Email:</strong><br>
+          <a href="mailto:matiasgamesdev.support@gmail.com">
+            matiasgamesdev.support@gmail.com
+          </a>
+        </p>
+
+        <p>
+          <strong>Android Package:</strong><br>
+          <code>com.matias.newyearfireworkplayground</code>
+        </p>
+
+        <p>
+          <strong>Official Website:</strong><br>
+          <a href="https://7583p.github.io/new-year-fireworks-site/">
+            New Year Fireworks Playground
+          </a>
+        </p>
+
+      </div>
+
+      <div class="highlight">
+        <p>
+          <strong>Transparency Notice:</strong>
+          The specific information processed
+          depends on the functionality enabled
+          in the Game, the integrated service
+          configurations, user choices
+          and applicable privacy requirements.
+        </p>
+      </div>
+
+    </article>
+
   </main>
 
   <footer class="wrap">
-    <p>© 2026 New Year Fireworks Playground</p>
+    <p>
+      &copy; 2026 New Year Fireworks Playground.
+      All rights reserved.
+    </p>
   </footer>
+
 </body>
 </html>
