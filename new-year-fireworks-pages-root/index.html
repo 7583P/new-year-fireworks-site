@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official site for New Year Fireworks Playground, a colorful Android game featuring fireworks, celebration, survival mode, and festive challenges.">
+  <title>New Year Fireworks Playground | Official Site</title>
+  <style>
+    :root{
+      --bg1:#0b1026;
+      --bg2:#120f33;
+      --card:#ffffff10;
+      --line:#ffffff22;
+      --text:#f6f8ff;
+      --muted:#c8d0ea;
+      --gold:#ffd56a;
+      --pink:#ff78d1;
+      --cyan:#7be9ff;
+      --green:#8cffc7;
+      --shadow:0 18px 50px rgba(0,0,0,.32);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(123,233,255,.16), transparent 24%),
+        radial-gradient(circle at 80% 12%, rgba(255,120,209,.15), transparent 28%),
+        radial-gradient(circle at 22% 82%, rgba(140,255,199,.12), transparent 22%),
+        linear-gradient(180deg, var(--bg2), var(--bg1));
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter:blur(10px);
+      background:rgba(8,10,25,.62);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      min-height:76px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.03em}
+    .brand-badge{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,#ff7ecf,#7be9ff 55%,#ffd56a);
+      display:grid;place-items:center;
+      box-shadow:0 10px 28px rgba(123,233,255,.18);
+      color:#13172d;font-size:1.35rem;font-weight:900;
+    }
+    .links{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+    .links a{text-decoration:none;color:var(--muted);font-weight:700}
+    .links a:hover{color:#fff}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      border:none;border-radius:14px;padding:14px 20px;
+      text-decoration:none;font-weight:800;cursor:pointer;
+      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{
+      color:#12162c;
+      background:linear-gradient(135deg,var(--gold),#ff92c2);
+      box-shadow:0 14px 38px rgba(255,160,190,.28);
+    }
+    .btn-secondary{
+      color:#fff;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)
+    }
+    .hero{padding:72px 0 56px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:34px;align-items:center}
+    .eyebrow{
+      display:inline-flex;gap:10px;align-items:center;padding:10px 14px;
+      border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);
+      color:var(--gold);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.82rem;
+    }
+    h1{
+      margin:18px 0 18px;font-size:clamp(2.7rem,6vw,5.3rem);line-height:.98;letter-spacing:-.045em;
+      max-width:760px;
+    }
+    .lead{font-size:1.12rem;line-height:1.82;color:var(--muted);max-width:720px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .hero-card{
+      position:relative;background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.12); border-radius:28px; padding:24px; box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .device{
+      border-radius:24px; background:linear-gradient(180deg,#172146,#10152f); padding:18px; border:1px solid rgba(255,255,255,.12)
+    }
+    .screen{
+      min-height:410px;border-radius:20px;overflow:hidden;position:relative;
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,117,202,.22), transparent 20%),
+        radial-gradient(circle at 70% 22%, rgba(123,233,255,.22), transparent 18%),
+        radial-gradient(circle at 45% 60%, rgba(255,213,106,.20), transparent 28%),
+        linear-gradient(180deg,#08142f,#11122c 38%,#0d1733);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .screen:before,.screen:after{content:"";position:absolute;border-radius:50%}
+    .screen:before{width:240px;height:240px;left:-30px;top:42px;background:radial-gradient(circle, rgba(255,255,255,.18), transparent 60%)}
+    .screen:after{width:200px;height:200px;right:-20px;top:120px;background:radial-gradient(circle, rgba(123,233,255,.16), transparent 60%)}
+    .burst{position:absolute;border-radius:50%;opacity:.95}
+    .b1{width:14px;height:14px;left:18%;top:18%;background:#ff8ad7;box-shadow:0 0 0 14px rgba(255,138,215,.14),0 0 0 40px rgba(255,138,215,.08)}
+    .b2{width:12px;height:12px;right:18%;top:20%;background:#7be9ff;box-shadow:0 0 0 13px rgba(123,233,255,.15),0 0 0 36px rgba(123,233,255,.08)}
+    .b3{width:16px;height:16px;left:43%;top:34%;background:#ffd56a;box-shadow:0 0 0 16px rgba(255,213,106,.16),0 0 0 42px rgba(255,213,106,.08)}
+    .b4{width:11px;height:11px;right:34%;top:46%;background:#8cffc7;box-shadow:0 0 0 12px rgba(140,255,199,.14),0 0 0 32px rgba(140,255,199,.07)}
+    .caption{
+      position:absolute;left:18px;right:18px;bottom:18px;padding:18px 18px;
+      border-radius:18px;background:rgba(9,12,28,.68);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.1)
+    }
+    .caption h2{margin:0 0 8px;font-size:1.18rem}
+    .caption p{margin:0;color:#d6ddf1;line-height:1.7}
+    section{padding:26px 0 22px}
+    .section-title{font-size:2.1rem;margin:0 0 10px}
+    .section-text{color:var(--muted);line-height:1.8;max-width:850px;margin:0 0 24px}
+    .grid{display:grid;gap:20px}
+    .cards-3{grid-template-columns:repeat(3,1fr)}
+    .cards-4{grid-template-columns:repeat(4,1fr)}
+    .card{
+      background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)
+    }
+    .card .icon{font-size:2rem;margin-bottom:12px;display:inline-block}
+    .card h3{margin:0 0 10px;font-size:1.18rem}
+    .card p{margin:0;color:var(--muted);line-height:1.75}
+    .pill-list{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .pill{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#eaf0ff;font-size:.92rem;font-weight:700}
+    .highlight{
+      margin-top:18px;padding:22px 24px;border-radius:24px;
+      background:linear-gradient(135deg, rgba(255,213,106,.12), rgba(123,233,255,.09));
+      border:1px solid rgba(255,255,255,.12)
+    }
+    .highlight strong{color:#fff}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .footer{
+      margin-top:38px;padding:28px 0 44px;border-top:1px solid rgba(255,255,255,.08);color:var(--muted)
+    }
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .small{font-size:.94rem;line-height:1.7}
+    @media (max-width: 980px){
+      .hero-grid,.two-col,.cards-4{grid-template-columns:1fr}
+      .cards-3{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 700px){
+      .nav{padding:8px 0 12px;align-items:flex-start;flex-direction:column}
+      .cards-3{grid-template-columns:1fr}
+      .hero{padding-top:44px}
+      h1{font-size:clamp(2.4rem,10vw,4rem)}
+      .screen{min-height:360px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="brand-badge">✦</div>
+        <div>NEW YEAR FIREWORKS PLAYGROUND</div>
+      </div>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#modes">Modes</a>
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a class="btn btn-secondary" href="privacy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Festive Android game • Fireworks • Survival</div>
+          <h1>Celebrate the night with color, fireworks, and challenge.</h1>
+          <p class="lead">
+            <strong>New Year Fireworks Playground</strong> is a festive mobile game experience built around bright fireworks,
+            colorful night scenes, and fun gameplay modes. Enjoy the spectacle, explore the celebration, and test yourself in
+            <strong>Survival Mode</strong> and other game experiences designed for Android players.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.matias.newyearfireworkplayground">Google Play</a>
+            <a class="btn btn-secondary" href="privacy.html">Read Privacy Policy</a>
+          </div>
+          <div class="pill-list">
+            <span class="pill">Android Game</span>
+            <span class="pill">Survival Mode</span>
+            <span class="pill">Festive Visuals</span>
+            <span class="pill">Fireworks Theme</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="device">
+            <div class="screen">
+              <span class="burst b1"></span>
+              <span class="burst b2"></span>
+              <span class="burst b3"></span>
+              <span class="burst b4"></span>
+              <div class="caption">
+                <h2>Official Game Site</h2>
+                <p>
+                  Discover the game, learn about its modes, and access the official privacy policy for New Year Fireworks Playground.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About the game</h2>
+        <p class="section-text">
+          New Year Fireworks Playground is designed to bring the excitement of New Year celebration into a colorful mobile game.
+          It combines a vivid nighttime atmosphere, bright fireworks-inspired visuals, and game modes that let players enjoy both
+          casual fun and more demanding play sessions.
+        </p>
+        <div class="highlight small">
+          <strong>Good to know:</strong> this site can be used as your official app page for Google Cloud, Google Play Games setup,
+          and your public links in Google Play Console.
+        </div>
+      </div>
+    </section>
+
+    <section id="modes">
+      <div class="wrap">
+        <h2 class="section-title">Game modes</h2>
+        <p class="section-text">
+          The game offers a festive gameplay experience with multiple ways to play. You asked to include <strong>Survival Mode</strong>,
+          so it is highlighted here as one of the main experiences.
+        </p>
+        <div class="grid cards-3">
+          <article class="card">
+            <div class="icon">🎇</div>
+            <h3>Fireworks Playground</h3>
+            <p>
+              Enjoy the core fireworks-themed experience in a colorful environment inspired by celebration, night lights, and New Year energy.
+            </p>
+          </article>
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>Survival Mode</h3>
+            <p>
+              Face a more demanding mode where staying alive, reacting quickly, and adapting to the action becomes the main challenge.
+            </p>
+          </article>
+          <article class="card">
+            <div class="icon">🏆</div>
+            <h3>Additional Challenges</h3>
+            <p>
+              Experience the rest of the game content through challenge-based play, varied sessions, and festive action built for replayability.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="section-title">Main features</h2>
+        <p class="section-text">
+          The site below summarizes the experience in a clear and visually appealing way for players, store reviewers, and Google platform setup.
+        </p>
+        <div class="grid cards-4">
+          <article class="card">
+            <div class="icon">🌌</div>
+            <h3>Festive visuals</h3>
+            <p>Bright colors, night-sky mood, and a celebration-focused presentation that matches the game's theme.</p>
+          </article>
+          <article class="card">
+            <div class="icon">📱</div>
+            <h3>Made for Android</h3>
+            <p>Prepared as a mobile experience for Android users and compatible with your Google Play presence.</p>
+          </article>
+          <article class="card">
+            <div class="icon">⚡</div>
+            <h3>Quick sessions</h3>
+            <p>Easy to open and enjoy, whether the player wants a short celebratory session or a more intense challenge.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎉</div>
+            <h3>New Year atmosphere</h3>
+            <p>The entire experience is themed around fireworks, celebration, and the energy of a festive night.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy">
+      <div class="wrap two-col">
+        <div class="card">
+          <h3>Privacy Policy</h3>
+          <p>
+            This website includes a public privacy policy page for the game. You can use that URL in Google Play Console,
+            Google Cloud OAuth configuration, and related platform setup screens.
+          </p>
+          <p class="small">
+            Important: the privacy policy should match what your game actually does, especially if you use ads,
+            Play Games Services, or in-app purchases.
+          </p>
+          <p><a class="btn btn-secondary" href="privacy.html">Open Privacy Policy</a></p>
+        </div>
+        <div class="card">
+          <h3>Official links</h3>
+          <p class="small">
+            Use the homepage URL as the <strong>application home page</strong> and the privacy page URL as the
+            <strong>privacy policy URL</strong> in the Google configuration screens.
+          </p>
+          <div class="pill-list">
+            <span class="pill">Home page</span>
+            <span class="pill">Privacy policy</span>
+            <span class="pill">GitHub Pages ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner small">
+      <div>© 2026 New Year Fireworks Playground. All rights reserved.</div>
+      <div>
+        <a href="index.html">Home</a> ·
+        <a href="privacy.html">Privacy Policy</a> ·
+        <a href="https://play.google.com/store/apps/details?id=com.matias.newyearfireworkplayground">Google Play</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
